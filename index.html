@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Andrey Smirnov CV</title>
 
 <style>
@@ -23,82 +23,97 @@ body{
   background:#fff;
 }
 
-/* LAYOUT */
-.wrapper{
-  display:flex;
-}
-
-/* SIDEBAR */
-nav{
+/* HEADER (sticky premium) */
+header{
   position:fixed;
-  top:40px;
-  left:30px;
-  width:180px;
+  top:0;
+  left:0;
+  right:0;
+  padding:14px 24px;
+  backdrop-filter: blur(14px);
+  background:rgba(255,255,255,0.7);
+  border-bottom:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  z-index:1000;
 }
 
-nav a{
-  display:block;
-  margin-bottom:12px;
-  font-size:14px;
+header nav a{
+  margin-right:18px;
+  font-size:13px;
   color:var(--muted);
   text-decoration:none;
   transition:.2s;
 }
 
-nav a:hover{
+header nav a:hover{
   color:var(--text);
 }
 
-/* CONTENT */
+/* LAYOUT */
 main{
-  margin-left:240px;
-  width:100%;
+  margin-top:70px;
 }
 
 /* SECTIONS */
 section{
-  max-width:900px;
-  padding:90px 24px;
+  max-width:920px;
   margin:0 auto;
+  padding:100px 22px;
+  opacity:0;
+  transform:translateY(18px);
+  animation:fade .8s ease forwards;
+}
+
+section:nth-child(1){animation-delay:.05s}
+section:nth-child(2){animation-delay:.1s}
+section:nth-child(3){animation-delay:.15s}
+section:nth-child(4){animation-delay:.2s}
+section:nth-child(5){animation-delay:.25s}
+
+@keyframes fade{
+  to{opacity:1; transform:translateY(0);}
 }
 
 h2{
-  font-size:12px;
-  letter-spacing:.18em;
+  font-size:11px;
+  letter-spacing:.22em;
   text-transform:uppercase;
   color:var(--muted);
-  margin-bottom:30px;
+  margin-bottom:35px;
 }
 
 /* HERO */
 .hero{
   display:flex;
-  align-items:center;
   gap:40px;
+  align-items:center;
   padding-top:120px;
 }
 
 .hero img{
-  width:170px;
-  height:170px;
+  width:180px;
+  height:180px;
   object-fit:cover;
-  border-radius:4px;
+  border-radius:6px;
 }
 
 .hero h1{
-  font-size:42px;
+  font-size:44px;
   margin:0;
   font-weight:500;
 }
 
 .hero p{
   color:var(--muted);
+  margin-top:8px;
 }
 
 /* TEXT */
 p{
-  line-height:1.7;
+  line-height:1.75;
   font-size:16px;
+  margin-bottom:18px;
 }
 
 a{
@@ -111,25 +126,30 @@ a:hover{
   border-bottom:1px solid #000;
 }
 
-/* EXPERIENCE BLOCKS */
+/* EXPERIENCE */
 .block{
-  margin-bottom:35px;
+  margin-bottom:40px;
 }
 
 .block b{
   font-weight:600;
+  display:block;
+  margin-bottom:6px;
 }
 
-/* VIDEO GRID */
+/* VIDEO GRID (premium) */
 .video-grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
+  grid-template-columns:repeat(2,1fr);
+  gap:26px;
 }
 
 .video{
+  position:relative;
   width:100%;
   aspect-ratio:16/9;
+  overflow:hidden;
+  border-radius:8px;
 }
 
 iframe{
@@ -141,19 +161,6 @@ iframe{
 /* MOBILE */
 @media(max-width:900px){
 
-nav{
-  position:relative;
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  width:100%;
-  padding:15px;
-}
-
-main{
-  margin-left:0;
-}
-
 .hero{
   flex-direction:column;
   align-items:flex-start;
@@ -163,8 +170,17 @@ main{
   grid-template-columns:1fr;
 }
 
+header{
+  flex-direction:column;
+  gap:8px;
+}
+
 section{
-  padding:60px 18px;
+  padding:70px 18px;
+}
+
+.hero h1{
+  font-size:34px;
 }
 }
 
@@ -173,21 +189,20 @@ section{
 
 <body>
 
-<div class="wrapper">
-
-<!-- MENU -->
+<header>
 <nav>
 <a href="#about">Обо мне</a>
 <a href="#exp">Опыт</a>
-<a href="#music">Музыка</a>
+<a href="#music">Проекты</a>
 <a href="#video">Видео</a>
 </nav>
+</header>
 
 <main>
 
 <!-- HERO -->
 <section class="hero">
-<img src="photo.jpg" />
+<img src="photo.jpg">
 <div>
 <h1>Andrey Smirnov</h1>
 <p>music · design · production</p>
@@ -197,59 +212,97 @@ section{
 <!-- ABOUT -->
 <section id="about">
 <h2>Обо мне</h2>
+
 <p>
-Более 18-ти лет я занимаюсь музыкой и развиваюсь в различных её проявлениях. В следствии чего увлекся дизайном, организацией мероприятий и создании музыкальных полотен. Люблю продумывать процесс и оптимизировать его воплощение. В меру перфекционист и достигатор. Постоянно ищу что-то новое и уникальное, учитывая потребности. Мне важно какой чувственный опыт получит человек, во взаимодействии с продуктом. Параллельно этому идут: польза, ощущения, эмоции и воспоминания.<br><br>
+Более 18-ти лет я занимаюсь музыкой и развиваюсь в различных её проявлениях. В следствии чего увлекся дизайном, организацией мероприятий и создании музыкальных полотен. Люблю продумывать процесс и оптимизировать его воплощение. В меру перфекционист и достигатор. Постоянно ищу что-то новое и уникальное, учитывая потребности. Мне важно какой чувственный опыт получит человек, во взаимодействии с продуктом. Параллельно этому идут: польза, ощущения, эмоции и воспоминания.
+</p>
+
+<p>
 Занимаюсь спортом, йогой, изучаю и практикую буд-дизм, люблю шосейные велосипеды, путешествия и ручной труд.
 </p>
+
 </section>
 
 <!-- EXPERIENCE -->
 <section id="exp">
-
-<h2>Опыт работы</h2>
+<h2>Опыт Работы</h2>
 
 <div class="block">
-<b><a href="https://instagram.com/uppercuts.djschool">UPERCUTS DJs Academy</a> » 2015-2018</b>
+<b>UPERCUTS DJs Academy (<a href="https://instagram.com/uppercuts.djschool">instagram.com/uppercuts.djschool</a>) » 2015-2018</b>
+
 <p>
-От преподавателя, до главного партнера. Поспособствовал увеличению прибыли от 90 000 до 1 500 000р в месяц, Прирост команды от 4 до 20 человек. Эксклюзивный контракт с JBL, и доп.инвестиции. Организация тура по городам РФ с вечеринками и мастер-классами. Более 30 ивентов, 
+От преподавателя, до главного партнера. Поспособствовал увеличению прибыли от 90 000 до 1 500 000р в месяц, Прирост команды от 4 до 20 человек. Эксклюзивный контракт с JBL, и доп.инвестиции. Организация тура по городам РФ с вечеринками и мастер-классами. Более 30 ивентов,
 <a href="https://youtu.be/q-MMuts2NNY?si=5mSXwEbaPyQhp-Si">видео</a>
 самым ярким считаю кейс на Faces&Laces 2016
 </p>
 </div>
 
 <div class="block">
-<b><a href="https://instagram.com/yambo.music">YAMBO</a> > 2017-2021</b>
+<b>YAMBO (<a href="https://instagram.com/yambo.music">instagram.com/yambo.music</a>) > 2017-2021</b>
+
 <p>
-Создание и развитие музыкального лейбла на платформе 
+Создание и развитие музыкального лейбла на платформе
 <a href="https://soundcloud.com/yambomusic">Soundcloud</a>.
-Авторское радиошоу и вечеринки в течении 3-х лет. Бренды - Aperol, JBL, Puma, VK. Видео:
+Авторское радиошоу и вечеринки в течении 3-х лет. Привлек для партнерства бренды - Aperol, JBL, Puma, VK.
+Видео:
 <a href="https://vk.com/wall-147970660_2214">ссылка</a>
+YAMBO SUMMER CAMP powered by JBL.
 </p>
 </div>
 
 <div class="block">
 <b>JBL ambassador » 2020-2021</b>
+
 <p>
 Годовой контракт с брендом JBL.
-<a href="https://www.instagram.com/p/CJL7t7GCzQM/">рекламная кампания</a>
+<a href="https://www.instagram.com/p/CJL7t7GCzQM/">видео</a>
+рекламной кампании студийных мониторов бренда.
 </p>
 </div>
 
 <div class="block">
-<b><a href="https://instagram.com/krasota.restaurant.moscow/">КРАСОТА</a> » 2021-now</b>
-<p>Музыкальный продюсер, саунд-дизайнер.</p>
+<b>КРАСОТА (<a href="https://instagram.com/krasota.restaurant.moscow/">instagram.com/krasota.restaurant.moscow/</a>) гастро-театр » 2021 - now</b>
+
+<p>
+Музыкальный продюсер, саунд-дизайнер. Участвую в создании аудио-визуального контента сет-ужинов. Получил признание от искусствоведа Ольги Свибловой.
+</p>
 </div>
 
 <div class="block">
-<b><a href="https://instagram.com/urban__winery/">URBAN WINERY</a></b>
-<p>Музыкальный директор и концепт.</p>
+<b>URBAN WINERY (<a href="https://instagram.com/urban__winery/">instagram.com/urban__winery/</a>) » 2024-2026</b>
+
+<p>
+Музыкальный и технический директор ресторана. Разработка и реализация концепции винтажной аудио-комнаты. Работа подрядчиками, ведение технического и интерьерного дизайна, разработка технических спецификаций.
+</p>
+</div>
+
+<div class="block">
+<b>2023 » 2025</b>
+
+<p>
+формирование концепции и и сборка коллекций фоновой музыки для: сети ресторанов Lucky group (Lucky, Eva, Loro, Margarita, Maya, Niki, Oltremare), Folk Team (Amber, Padron), Aiza (Алматы, Казахстан)
+</p>
+</div>
+
+<div class="block">
+<b>FOUND (<a href="https://instagram.com/found.pizzeria/">instagram.com/found.pizzeria/</a>) » 2021</b>
+
+<p>менеджер по продажам в магазине пластинок</p>
+</div>
+
+<div class="block">
+<b>Parni on Bikes (<a href="https://instagram.com/parnionbikes/">instagram.com/parnionbikes/</a>) 2023 » now</b>
+
+<p>
+трэвел проект четырех друзей... (<a href="https://youtube.com/@parnionbikes">смотреть</a>)
+</p>
 </div>
 
 </section>
 
 <!-- MUSIC -->
 <section id="music">
-<h2>Музыка</h2>
+<h2>Музыкальные проекты</h2>
 
 <div class="block">
 <b>Razumno » 2025</b>
@@ -273,13 +326,13 @@ section{
 <div class="video"><iframe src="https://www.youtube.com/embed/xDRpDAuvhhI"></iframe></div>
 <div class="video"><iframe src="https://www.youtube.com/embed/MxBNZRtu_kU"></iframe></div>
 <div class="video"><iframe src="https://www.youtube.com/embed/FgiQUImBu7I"></iframe></div>
+<div class="video"><iframe src="https://www.youtube.com/embed/YtOHhgMNwRU"></iframe></div>
 
 </div>
 
 </section>
 
 </main>
-</div>
 
 </body>
 </html>
