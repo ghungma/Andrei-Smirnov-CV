@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Andrey Smirnov CV</title>
+<title>CV</title>
 
 <style>
 :root{
@@ -12,67 +12,48 @@
   --line:#eaeaea;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,Inter,Arial;
-  color:var(--text);
   background:#fff;
+  color:var(--text);
 }
 
-/* HEADER (sticky premium) */
+/* HEADER */
 header{
   position:fixed;
   top:0;
   left:0;
   right:0;
-  padding:14px 24px;
-  backdrop-filter: blur(14px);
-  background:rgba(255,255,255,0.7);
+  padding:14px 22px;
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line);
   display:flex;
-  justify-content:space-between;
-  z-index:1000;
+  gap:18px;
+  z-index:999;
 }
 
-header nav a{
-  margin-right:18px;
+header a{
   font-size:13px;
   color:var(--muted);
   text-decoration:none;
-  transition:.2s;
 }
 
-header nav a:hover{
-  color:var(--text);
-}
+header a:hover{color:#000;}
 
-/* LAYOUT */
+/* MAIN */
 main{
   margin-top:70px;
 }
 
-/* SECTIONS */
+/* SECTION */
 section{
   max-width:920px;
   margin:0 auto;
-  padding:100px 22px;
-  opacity:0;
-  transform:translateY(18px);
-  animation:fade .8s ease forwards;
-}
-
-section:nth-child(1){animation-delay:.05s}
-section:nth-child(2){animation-delay:.1s}
-section:nth-child(3){animation-delay:.15s}
-section:nth-child(4){animation-delay:.2s}
-section:nth-child(5){animation-delay:.25s}
-
-@keyframes fade{
-  to{opacity:1; transform:translateY(0);}
+  padding:90px 22px;
 }
 
 h2{
@@ -88,68 +69,57 @@ h2{
   display:flex;
   gap:40px;
   align-items:center;
-  padding-top:120px;
 }
 
 .hero img{
   width:180px;
   height:180px;
   object-fit:cover;
-  border-radius:6px;
 }
 
 .hero h1{
   font-size:44px;
   margin:0;
-  font-weight:500;
 }
 
 .hero p{
   color:var(--muted);
-  margin-top:8px;
 }
 
 /* TEXT */
 p{
   line-height:1.75;
   font-size:16px;
-  margin-bottom:18px;
 }
 
+/* LINKS */
 a{
-  color:var(--text);
+  color:#000;
   text-decoration:none;
   border-bottom:1px solid #ddd;
 }
 
-a:hover{
-  border-bottom:1px solid #000;
-}
+a:hover{border-bottom:1px solid #000;}
 
 /* EXPERIENCE */
 .block{
-  margin-bottom:40px;
+  margin-bottom:35px;
 }
 
 .block b{
-  font-weight:600;
   display:block;
-  margin-bottom:6px;
+  margin-bottom:8px;
 }
 
-/* VIDEO GRID (premium) */
+/* VIDEO */
 .video-grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:26px;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
 }
 
 .video{
-  position:relative;
-  width:100%;
   aspect-ratio:16/9;
-  overflow:hidden;
-  border-radius:8px;
 }
 
 iframe{
@@ -160,42 +130,20 @@ iframe{
 
 /* MOBILE */
 @media(max-width:900px){
-
-.hero{
-  flex-direction:column;
-  align-items:flex-start;
+.hero{flex-direction:column; align-items:flex-start;}
+.video-grid{grid-template-columns:1fr;}
 }
-
-.video-grid{
-  grid-template-columns:1fr;
-}
-
-header{
-  flex-direction:column;
-  gap:8px;
-}
-
-section{
-  padding:70px 18px;
-}
-
-.hero h1{
-  font-size:34px;
-}
-}
-
 </style>
+
 </head>
 
 <body>
 
 <header>
-<nav>
 <a href="#about">Обо мне</a>
 <a href="#exp">Опыт</a>
-<a href="#music">Проекты</a>
+<a href="#music">Музыка</a>
 <a href="#video">Видео</a>
-</nav>
 </header>
 
 <main>
@@ -228,97 +176,103 @@ section{
 <h2>Опыт Работы</h2>
 
 <div class="block">
-<b>UPERCUTS DJs Academy (<a href="https://instagram.com/uppercuts.djschool">instagram.com/uppercuts.djschool</a>) » 2015-2018</b>
+
+<b>UPERCUTS DJs Academy(в названии гипер ссылка instagram.com/uppercuts.djschool) » 2015-2018</b>
 
 <p>
-От преподавателя, до главного партнера. Поспособствовал увеличению прибыли от 90 000 до 1 500 000р в месяц, Прирост команды от 4 до 20 человек. Эксклюзивный контракт с JBL, и доп.инвестиции. Организация тура по городам РФ с вечеринками и мастер-классами. Более 30 ивентов,
-<a href="https://youtu.be/q-MMuts2NNY?si=5mSXwEbaPyQhp-Si">видео</a>
-самым ярким считаю кейс на Faces&Laces 2016
+От преподавателя, до главного партнера. Поспособствовал увеличению прибыли от 90 000 до 1 500 000р в месяц, Прирост команды от 4 до 20 человек. Эксклюзивный контракт с JBL, и доп.инвестиции. Организация тура по городам РФ с вечеринками и мастер-классами. Более 30 ивентов, (в текст дальше вставь ссылку https://youtu.be/q-MMuts2NNY?si=5mSXwEbaPyQhp-Si) самым ярким считаю кейс на Faces&Laces 2016
 </p>
+
 </div>
 
 <div class="block">
-<b>YAMBO (<a href="https://instagram.com/yambo.music">instagram.com/yambo.music</a>) > 2017-2021</b>
+
+<b>YAMBO (гиппер ссылка в название instagram.com/yambo.music) > 2017-2021</b>
 
 <p>
-Создание и развитие музыкального лейбла на платформе
-<a href="https://soundcloud.com/yambomusic">Soundcloud</a>.
-Авторское радиошоу и вечеринки в течении 3-х лет. Привлек для партнерства бренды - Aperol, JBL, Puma, VK.
-Видео:
-<a href="https://vk.com/wall-147970660_2214">ссылка</a>
-YAMBO SUMMER CAMP powered by JBL.
+Создание и развитие музыкального лейбла на платформе Soundcloud (гиппер ссылка в это слово soundcloud.com/yambomusic). Авторское радиошоу и вечеринки в течении 3-х лет. Привлек для партнерства бренды - Aperol, JBL, Puma, VK. Видео прямой трансляции ивента - (в текст дальше ссылку https://vk.com/wall-147970660_2214) YAMBO SUMMER CAMP powered by JBL.
 </p>
+
 </div>
 
 <div class="block">
-<b>JBL ambassador » 2020-2021</b>
+
+<b>JBL ambassador > 2020-2021</b>
 
 <p>
-Годовой контракт с брендом JBL.
-<a href="https://www.instagram.com/p/CJL7t7GCzQM/">видео</a>
-рекламной кампании студийных мониторов бренда.
+Годовой контракт с брендом, являющийся квинтесенцией прошлого опыта и наработанного доверия с компанией JBL. Главной заслугой могу выделить (в текст дальше ссылку https://www.instagram.com/p/CJL7t7GCzQM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==) видео рекламной кампании студийных мониторов бренда.
 </p>
+
 </div>
 
 <div class="block">
-<b>КРАСОТА (<a href="https://instagram.com/krasota.restaurant.moscow/">instagram.com/krasota.restaurant.moscow/</a>) гастро-театр » 2021 - now</b>
+
+<b>КРАСОТА (гиппер ссылка instagram.com/krasota.restaurant.moscow/) гастро-театр » 2021 - now</b>
 
 <p>
-Музыкальный продюсер, саунд-дизайнер. Участвую в создании аудио-визуального контента сет-ужинов. Получил признание от искусствоведа Ольги Свибловой.
+Музыкальный продюссер, саунд-дизайнер. Участвую в создании аудио-визуального контента сет-ужинов. Получил признание от искусствоведа Ольги Свибловой.
 </p>
+
 </div>
 
 <div class="block">
-<b>URBAN WINERY (<a href="https://instagram.com/urban__winery/">instagram.com/urban__winery/</a>) » 2024-2026</b>
+
+<b>URBAN WINERY(ссылка в названии instagram.com/urban__winery/) » 2024-2026</b>
 
 <p>
-Музыкальный и технический директор ресторана. Разработка и реализация концепции винтажной аудио-комнаты. Работа подрядчиками, ведение технического и интерьерного дизайна, разработка технических спецификаций.
+Музыкальный и технический директор ресторана. Разработка и реализация концепции винтажной аудио-комнаты. Работа подрядчиками, ведение технического и интерьерного дизайна, разработка технических спецификаций, сбор и настройка винтажной аудио-системы.
 </p>
+
 </div>
 
 <div class="block">
-<b>2023 » 2025</b>
 
-<p>
-формирование концепции и и сборка коллекций фоновой музыки для: сети ресторанов Lucky group (Lucky, Eva, Loro, Margarita, Maya, Niki, Oltremare), Folk Team (Amber, Padron), Aiza (Алматы, Казахстан)
-</p>
+<b>2023 » 2025 – (этот текст не жирным) формирование концепции и и сборка коллекций фоновой музыки для: сети ресторанов Lucky group (Lucky, Eva, Loro, Margarita,
+Maya, Niki, Oltremare), Folk Team (Amber, Padron), Aiza (Алматы, Казах-
+стан)</b>
+
 </div>
 
 <div class="block">
-<b>FOUND (<a href="https://instagram.com/found.pizzeria/">instagram.com/found.pizzeria/</a>) » 2021</b>
 
-<p>менеджер по продажам в магазине пластинок</p>
+<b>FOUND (гиппер ссылка в название instagram.com/found.pizzeria/) » 2021 – (этот текст не жирным) менеджер по продажам в магазине пластинок</b>
+
 </div>
 
 <div class="block">
-<b>Parni on Bikes (<a href="https://instagram.com/parnionbikes/">instagram.com/parnionbikes/</a>) 2023 » now</b>
 
-<p>
-трэвел проект четырех друзей... (<a href="https://youtube.com/@parnionbikes">смотреть</a>)
-</p>
+<b>проект Parni on Bikes (название гиппер ссылкой instagram.com/parnionbikes/) 2023 » now – (этот текст не жирным) трэвел проект четырех друзей, которые любят путешествия и велосипеды. Мы исследуем нашу страну и зарубежье на велосипедах, снимая про это фильмы (это слово ссылкой youtube.com/@parnionbikes)</b>
+
 </div>
 
 </section>
 
 <!-- MUSIC -->
 <section id="music">
-<h2>Музыкальные проекты</h2>
+<h2>Музыкальные проекты и фриланс</h2>
 
 <div class="block">
-<b>Razumno » 2025</b>
-<p><a href="https://instagram.com/reel/DG7eNqTCmeb/">смотреть</a></p>
+<b>бренд Razumno » 2025 – (этот текст не жирным) продюсирование музыки в рекламный ролик (смотреть (в это слово гиппер ссылку instagram.com/reel/DG7eNqTCmeb/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==))</b>
 </div>
 
 <div class="block">
-<b>Sound design » 2025</b>
-<p><a href="https://www.instagram.com/reel/DMfHYRQI37T/">смотреть</a></p>
+<b>(жирным) 2025 – (не жирным) создание звукового ряда для видео-арта проекта режиссерки Валентины Ходкевич и Dance Film Perfomance (UK, London) (смотреть (в это слово гиппер ссылку https://www.instagram.com/reel/DMfHYRQI37T/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==))</b>
+</div>
+
+<div class="block">
+» Дизайн постеров и афиш для мероприятий  
+» Саунд-треки для короткометражного фильма (частная работа) смотреть каты некоторых сцен (в эту фразу вставить ссылку https://youtu.be/yT6YGgqy9JE)  
+» Танцевальные DJ-сеты в клубах смотреть live set from Yerevan (эта фраза ссылкой https://youtu.be/cj2xIGgPGiY?si=zqu4GMRG7WFq2eTj)  
+› фоновые в барах/ресторанах (эта фраза ссылкой https://youtu.be/SudUetMd-Hg?si=AVG3ac-R97Z1twpQ)  
+› сеты на онлайн-радио смотреть (слово ссылкой https://youtu.be/2GqFJA29onY?si=HMFtIPK6NBRWw_N3), еще смотреть (эта фраза ссылкой https://youtu.be/ktBEyFBmcU4?si=50ImweXxm8Zl2Pnc)  
+» Live-перфомансы с эмбиант/абстрактной музыкой (эта фраза ссылкой https://www.instagram.com/reel/C0zRn3AilnZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)
 </div>
 
 </section>
 
 <!-- VIDEO -->
 <section id="video">
-<h2>Видео</h2>
+<h2>Видео карусель</h2>
 
 <div class="video-grid">
 
