@@ -1,83 +1,200 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Andrey Smirnov CV</title>
 
 <style>
-body{
-margin:0;
-font-family: Arial;
-background:#fff;
-color:#000;
+:root{
+  --text:#111;
+  --muted:#777;
+  --line:#eaeaea;
 }
 
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,Inter,Arial;
+  color:var(--text);
+  background:#fff;
+}
+
+/* LAYOUT */
+.wrapper{
+  display:flex;
+}
+
+/* SIDEBAR */
+nav{
+  position:fixed;
+  top:40px;
+  left:30px;
+  width:180px;
+}
+
+nav a{
+  display:block;
+  margin-bottom:12px;
+  font-size:14px;
+  color:var(--muted);
+  text-decoration:none;
+  transition:.2s;
+}
+
+nav a:hover{
+  color:var(--text);
+}
+
+/* CONTENT */
+main{
+  margin-left:240px;
+  width:100%;
+}
+
+/* SECTIONS */
 section{
-max-width:900px;
-margin:0 auto;
-padding:60px 20px;
+  max-width:900px;
+  padding:90px 24px;
+  margin:0 auto;
 }
 
 h2{
-margin-top:40px;
+  font-size:12px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:30px;
 }
 
-a{color:#000;}
-
-.menu{
-position:fixed;
-top:20px;
-left:20px;
-font-size:14px;
-}
-
-.menu a{
-display:block;
-margin-bottom:8px;
-text-decoration:none;
-}
-
-.menu a:hover{text-decoration:underline;}
-
+/* HERO */
 .hero{
-display:flex;
-gap:30px;
-align-items:center;
-padding:60px 20px;
+  display:flex;
+  align-items:center;
+  gap:40px;
+  padding-top:120px;
 }
 
 .hero img{
-width:160px;
-height:160px;
-object-fit:cover;
+  width:170px;
+  height:170px;
+  object-fit:cover;
+  border-radius:4px;
 }
 
-.video iframe{
-width:100%;
-height:400px;
-margin-bottom:20px;
+.hero h1{
+  font-size:42px;
+  margin:0;
+  font-weight:500;
 }
+
+.hero p{
+  color:var(--muted);
+}
+
+/* TEXT */
+p{
+  line-height:1.7;
+  font-size:16px;
+}
+
+a{
+  color:var(--text);
+  text-decoration:none;
+  border-bottom:1px solid #ddd;
+}
+
+a:hover{
+  border-bottom:1px solid #000;
+}
+
+/* EXPERIENCE BLOCKS */
+.block{
+  margin-bottom:35px;
+}
+
+.block b{
+  font-weight:600;
+}
+
+/* VIDEO GRID */
+.video-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.video{
+  width:100%;
+  aspect-ratio:16/9;
+}
+
+iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+nav{
+  position:relative;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  width:100%;
+  padding:15px;
+}
+
+main{
+  margin-left:0;
+}
+
+.hero{
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.video-grid{
+  grid-template-columns:1fr;
+}
+
+section{
+  padding:60px 18px;
+}
+}
+
 </style>
-
 </head>
 
 <body>
 
-<div class="menu">
+<div class="wrapper">
+
+<!-- MENU -->
+<nav>
 <a href="#about">Обо мне</a>
 <a href="#exp">Опыт</a>
 <a href="#music">Музыка</a>
 <a href="#video">Видео</a>
-</div>
+</nav>
 
+<main>
+
+<!-- HERO -->
 <section class="hero">
-<img src="photo.jpg">
+<img src="photo.jpg" />
 <div>
-<h1>Андрей Смирнов</h1>
+<h1>Andrey Smirnov</h1>
+<p>music · design · production</p>
 </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
 <h2>Обо мне</h2>
 <p>
@@ -86,110 +203,83 @@ margin-bottom:20px;
 </p>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="exp">
-<h2>Опыт Работы</h2>
 
-<p><b><a href="https://instagram.com/uppercuts.djschool">UPERCUTS DJs Academy</a></b> » 2015-2018</p>
+<h2>Опыт работы</h2>
 
+<div class="block">
+<b><a href="https://instagram.com/uppercuts.djschool">UPERCUTS DJs Academy</a> » 2015-2018</b>
 <p>
 От преподавателя, до главного партнера. Поспособствовал увеличению прибыли от 90 000 до 1 500 000р в месяц, Прирост команды от 4 до 20 человек. Эксклюзивный контракт с JBL, и доп.инвестиции. Организация тура по городам РФ с вечеринками и мастер-классами. Более 30 ивентов, 
 <a href="https://youtu.be/q-MMuts2NNY?si=5mSXwEbaPyQhp-Si">видео</a>
 самым ярким считаю кейс на Faces&Laces 2016
 </p>
+</div>
 
-<br>
-
-<p><b><a href="https://instagram.com/yambo.music">YAMBO</a></b> > 2017-2021</p>
-
+<div class="block">
+<b><a href="https://instagram.com/yambo.music">YAMBO</a> > 2017-2021</b>
 <p>
 Создание и развитие музыкального лейбла на платформе 
 <a href="https://soundcloud.com/yambomusic">Soundcloud</a>.
-Авторское радиошоу и вечеринки в течении 3-х лет. Привлек для партнерства бренды - Aperol, JBL, Puma, VK. Видео прямой трансляции ивента -
+Авторское радиошоу и вечеринки в течении 3-х лет. Бренды - Aperol, JBL, Puma, VK. Видео:
 <a href="https://vk.com/wall-147970660_2214">ссылка</a>
-YAMBO SUMMER CAMP powered by JBL.
 </p>
+</div>
 
-<br>
-
-<p><b>JBL ambassador</b> » 2020-2021</p>
-
+<div class="block">
+<b>JBL ambassador » 2020-2021</b>
 <p>
-Годовой контракт с брендом JBL. 
-<a href="https://www.instagram.com/p/CJL7t7GCzQM/">видео</a>
-рекламной кампании студийных мониторов бренда.
+Годовой контракт с брендом JBL.
+<a href="https://www.instagram.com/p/CJL7t7GCzQM/">рекламная кампания</a>
 </p>
+</div>
 
-<br>
+<div class="block">
+<b><a href="https://instagram.com/krasota.restaurant.moscow/">КРАСОТА</a> » 2021-now</b>
+<p>Музыкальный продюсер, саунд-дизайнер.</p>
+</div>
 
-<p><b><a href="https://instagram.com/krasota.restaurant.moscow/">КРАСОТА</a></b> гастро-театр » 2021 - now</p>
-
-<p>
-Музыкальный продюссер, саунд-дизайнер. Участвую в создании аудио-визуального контента сет-ужинов. Получил признание от искусствоведа Ольги Свибловой.
-</p>
-
-<br>
-
-<p><b><a href="https://instagram.com/urban__winery/">URBAN WINERY</a></b> » 2024-2026</p>
-
-<p>
-Музыкальный и технический директор ресторана. Разработка и реализация концепции винтажной аудио-комнаты. Работа подрядчиками, ведение технического и интерьерного дизайна, разработка технических спецификаций, сбор и настройка винтажной аудио-системы. Ведение концепции фоновой музыки в связке с подрядчиком DeloZvuka. Программный директор мероприятий.
-</p>
-
-<br>
-
-<p><b>2023 » 2025</b> – формирование концепции и и сборка коллекций фоновой музыки для: сети ресторанов Lucky group (Lucky, Eva, Loro, Margarita, Maya, Niki, Oltremare), Folk Team (Amber, Padron), Aiza (Алматы, Казахстан)</p>
-
-<br>
-
-<p><b><a href="https://instagram.com/found.pizzeria/">FOUND</a></b> » 2021</p>
-
-<p>менеджер по продажам в магазине пластинок</p>
-
-<br>
-
-<p><b><a href="https://instagram.com/parnionbikes/">Parni on Bikes</a></b> 2023 » now</p>
-
-<p>
-трэвел проект четырех друзей, которые любят путешествия и велосипеды. Мы исследуем нашу страну и зарубежье на велосипедах, снимая про это фильмы 
-<a href="https://youtube.com/@parnionbikes">смотреть</a>
-</p>
-
-</section>
-
-<section id="music">
-<h2>Музыкальные проекты и фриланс</h2>
-
-<p><b>Razumno</b> » 2025 – продюсирование музыки в рекламный ролик
-<a href="https://instagram.com/reel/DG7eNqTCmeb/">смотреть</a>
-</p>
-
-<p><b>2025</b> – создание звукового ряда для видео-арта проекта Валентины Ходкевич
-<a href="https://www.instagram.com/reel/DMfHYRQI37T/">смотреть</a>
-</p>
-
-<p>» Дизайн постеров и афиш</p>
-<p>» Саунд-треки для короткометражного фильма <a href="https://youtu.be/yT6YGgqy9JE">смотреть</a></p>
-
-<p>» DJ-сеты <a href="https://youtu.be/cj2xIGgPGiY">live set from Yerevan</a></p>
-<p>» <a href="https://youtu.be/SudUetMd-Hg">фоновые в барах</a></p>
-<p>» <a href="https://youtu.be/2GqFJA29onY">онлайн радио</a></p>
-
-<p>» <a href="https://www.instagram.com/reel/C0zRn3AilnZ/">Live-перфомансы</a></p>
-
-</section>
-
-<section id="video">
-<h2>Видео</h2>
-
-<div class="video">
-<iframe src="https://www.youtube.com/embed/oN-pwm7djQU"></iframe>
-<iframe src="https://www.youtube.com/embed/xDRpDAuvhhI"></iframe>
-<iframe src="https://www.youtube.com/embed/MxBNZRtu_kU"></iframe>
-<iframe src="https://www.youtube.com/embed/FgiQUImBu7I"></iframe>
-<iframe src="https://www.youtube.com/embed/YtOHhgMNwRU"></iframe>
+<div class="block">
+<b><a href="https://instagram.com/urban__winery/">URBAN WINERY</a></b>
+<p>Музыкальный директор и концепт.</p>
 </div>
 
 </section>
+
+<!-- MUSIC -->
+<section id="music">
+<h2>Музыка</h2>
+
+<div class="block">
+<b>Razumno » 2025</b>
+<p><a href="https://instagram.com/reel/DG7eNqTCmeb/">смотреть</a></p>
+</div>
+
+<div class="block">
+<b>Sound design » 2025</b>
+<p><a href="https://www.instagram.com/reel/DMfHYRQI37T/">смотреть</a></p>
+</div>
+
+</section>
+
+<!-- VIDEO -->
+<section id="video">
+<h2>Видео</h2>
+
+<div class="video-grid">
+
+<div class="video"><iframe src="https://www.youtube.com/embed/oN-pwm7djQU"></iframe></div>
+<div class="video"><iframe src="https://www.youtube.com/embed/xDRpDAuvhhI"></iframe></div>
+<div class="video"><iframe src="https://www.youtube.com/embed/MxBNZRtu_kU"></iframe></div>
+<div class="video"><iframe src="https://www.youtube.com/embed/FgiQUImBu7I"></iframe></div>
+
+</div>
+
+</section>
+
+</main>
+</div>
 
 </body>
 </html>
