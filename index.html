@@ -6,13 +6,9 @@
   <title>Андрей Смирнов</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -22,9 +18,7 @@
       line-height: 1.6;
     }
 
-    .layout {
-      display: flex;
-    }
+    .layout { display: flex; }
 
     /* MENU */
     .menu {
@@ -89,10 +83,7 @@
       margin-bottom: 20px;
     }
 
-    p {
-      font-size: 18px;
-      margin: 0;
-    }
+    p { font-size: 18px; margin: 0; }
 
     .divider {
       height: 1px;
@@ -107,6 +98,25 @@
     .experience a {
       color: #000;
       text-decoration: underline;
+    }
+
+    /* VIDEO CAROUSEL */
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+    }
+
+    .video-item p {
+      font-size: 14px;
+      opacity: 0.7;
+      margin-top: 8px;
     }
 
     .links a {
@@ -127,13 +137,9 @@
     }
 
     @media (max-width: 900px) {
-      .menu {
-        display: none;
-      }
-
-      .content {
-        margin-left: 0;
-      }
+      .menu { display: none; }
+      .content { margin-left: 0; }
+      iframe { height: 240px; }
     }
   </style>
 </head>
@@ -148,6 +154,7 @@
     <a href="#about">about</a>
     <a href="#experience">experience</a>
     <a href="#music">projects</a>
+    <a href="#videos">videos</a>
     <a href="#contacts">contacts</a>
   </nav>
 
@@ -180,53 +187,51 @@
       <h2>Опыт работы</h2>
 
       <p>
-        <b><a href="https://instagram.com/uppercuts.djschool" target="_blank">UPERCUTS DJs Academy</a></b> » 2015–2018<br><br>
+        <b><a href="https://instagram.com/uppercuts.djschool" target="_blank">UPERCUTS DJs Academy</a></b> » 2015-2018<br><br>
 
-        От преподавателя, до главного партнера. Поспособствовал увеличению прибыли от 90 000 до 1 500 000р в месяц, прирост команды от 4 до 20 человек. Эксклюзивный контракт с JBL, и доп. инвестиции. Организация тура по городам РФ с вечеринками и мастер-классами. Более 30 ивентов, 
+        От преподавателя, до главного партнера. Поспособствовал увеличению прибыли от 90 000 до 1 500 000р в месяц, Прирост команды от 4 до 20 человек. Эксклюзивный контракт с JBL, и доп.инвестиции. Организация тура по городам РФ с вечеринками и мастер-классами. Более 30 ивентов, 
         <a href="https://youtu.be/q-MMuts2NNY?si=5mSXwEbaPyQhp-Si" target="_blank">самым ярким считаю кейс на Faces&Laces 2016</a>
       </p>
 
       <p>
-        <b><a href="https://instagram.com/yambo.music" target="_blank">YAMBO</a></b> » 2017–2021<br><br>
+        <b><a href="https://instagram.com/yambo.music" target="_blank">YAMBO</a></b> » 2017-2021<br><br>
 
         Создание и развитие музыкального лейбла на платформе 
-        <a href="https://soundcloud.com/yambomusic" target="_blank">SoundCloud</a>. Авторское радиошоу и вечеринки в течении 3-х лет. Бренды: Aperol, JBL, Puma, VK. Видео —
-        <a href="https://vk.com/wall-147970660_2214" target="_blank">YAMBO SUMMER CAMP powered by JBL</a>
+        <a href="https://soundcloud.com/yambomusic" target="_blank">SoundCloud</a>. Авторское радиошоу и вечеринки в течении 3-х лет. Бренды: Aperol, JBL, Puma, VK. 
+        Видео: <a href="https://vk.com/wall-147970660_2214" target="_blank">YAMBO SUMMER CAMP powered by JBL</a>.
       </p>
 
       <p>
-        <b>JBL ambassador</b> » 2020–2021<br><br>
+        <b>JBL ambassador</b> » 2020-2021<br><br>
 
-        Годовой контракт с JBL. 
-        <a href="https://www.instagram.com/p/CJL7t7GCzQM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">рекламная кампания студийных мониторов</a>
+        Годовой контракт с брендом JBL. 
+        <a href="https://www.instagram.com/p/CJL7t7GCzQM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">рекламная кампания студийных мониторов</a>.
       </p>
 
       <p>
-        <b><a href="https://instagram.com/krasota.restaurant.moscow/" target="_blank">КРАСОТА</a></b> » 2021–now<br><br>
+        <b><a href="https://instagram.com/krasota.restaurant.moscow/" target="_blank">КРАСОТА</a></b> » 2021-now<br><br>
 
-        Музыкальный продюсер, саунд-дизайнер. Аудио-визуальные сет-ужины. Признание от Ольги Свибловой.
+        Музыкальный продюсер, саунд-дизайнер. Аудио-визуальные сет-ужины.
       </p>
 
       <p>
-        <b><a href="https://instagram.com/urban__winery/" target="_blank">URBAN WINERY</a></b> » 2024–2026<br><br>
+        <b><a href="https://instagram.com/urban__winery/" target="_blank">URBAN WINERY</a></b> » 2024-2026<br><br>
 
-        Музыкальный и технический директор ресторана. Винтажная аудио-комната, технический дизайн, концепция фоновой музыки.
+        Музыкальный и технический директор ресторана. Винтажная аудио-комната, концепция фоновой музыки.
       </p>
 
       <p>
-        <b>2023–2025</b> — фоновые музыкальные концепции для Lucky Group, Folk Team, Aiza (Almaty).
+        <b>2023-2025</b> — фоновые музыкальные концепции для ресторанов Lucky Group, Folk Team, Aiza (Almaty)
       </p>
 
       <p>
-        <b><a href="https://instagram.com/found.pizzeria/" target="_blank">FOUND</a></b> » 2021–2023<br><br>
+        <b><a href="https://instagram.com/found.pizzeria/" target="_blank">FOUND</a></b> » 2021-2023<br><br>
         менеджер по продажам винила
       </p>
 
       <p>
-        <b><a href="https://instagram.com/parnionbikes/" target="_blank">Parni on Bikes</a></b> » 2023–now<br><br>
-
-        тревел проект о путешествиях и велосипедах  
-        (<a href="https://youtube.com/@parnionbikes" target="_blank">YouTube</a>)
+        <b><a href="https://instagram.com/parnionbikes/" target="_blank">Parni on Bikes</a></b> » 2023-now<br><br>
+        тревел проект о путешествиях и велосипедах (<a href="https://youtube.com/@parnionbikes" target="_blank">YouTube</a>)
       </p>
     </section>
 
@@ -243,29 +248,52 @@
 
       <p>
         <b>Sound design</b> » 2025 — видео-арт проект (London)  
-        (<a href="https://www.instagram.com/reel/DMfHYRQI37T/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">смотреть</a>)
+        (<a href="https://www.instagram.com/reel/DMfHYRQI37T/" target="_blank">смотреть</a>)
       </p>
 
       <p>
-        дизайн постеров и афиш  
-        саундтреки для короткометражного фильма —
-        <a href="https://youtu.be/yT6YGgqy9JE" target="_blank">смотреть сцены</a>
+        DJ-сеты: live, бары, радио, онлайн-сеты (ссылки в разделе опыта выше)
       </p>
 
       <p>
-        DJ-сеты:  
-        <a href="https://youtu.be/cj2xIGgPGiY?si=zqu4GMRG7WFq2eTj" target="_blank">live Yerevan</a>,
-        <a href="https://youtu.be/SudUetMd-Hg?si=AVG3ac-R97Z1twpQ" target="_blank">bars</a>,
-        <a href="https://youtu.be/2GqFJA29onY?si=HMFtIPK6NBRWw_N3" target="_blank">radio</a>,
-        <a href="https://youtu.be/ktBEyFBmcU4?si=50ImweXxm8Zl2Pnc" target="_blank">sets</a>
+        live performances: йога, YAUZA, Blanc
       </p>
+    </section>
 
-      <p>
-        live performance:
-        <a href="https://www.instagram.com/reel/C0zRn3AilnZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">йога</a>,
-        <a href="https://www.instagram.com/p/Ch7OJHgrtTs/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">YAUZA</a>,
-        <a href="https://www.instagram.com/p/DSAlKg9iCRK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">Blanc</a>
-      </p>
+    <div class="divider"></div>
+
+    <!-- VIDEO CAROUSEL -->
+    <section id="videos">
+      <h2>Видео</h2>
+
+      <div class="video-grid">
+
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/oN-pwm7djQU" allowfullscreen></iframe>
+          <p>› фестиваль Архстояние</p>
+        </div>
+
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/xDRpDAuvhhI" allowfullscreen></iframe>
+          <p>› вечеринка в Soma (Москва)</p>
+        </div>
+
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/MxBNZRtu_kU" allowfullscreen></iframe>
+          <p>› RUSSPASS live performance</p>
+        </div>
+
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/FgiQUImBu7I" allowfullscreen></iframe>
+          <p>› радио KURS / INDUX</p>
+        </div>
+
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/YtOHhgMNwRU" allowfullscreen></iframe>
+          <p>› Blanc live performance</p>
+        </div>
+
+      </div>
     </section>
 
     <div class="divider"></div>
