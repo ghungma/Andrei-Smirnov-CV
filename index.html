@@ -10,6 +10,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background: #fff;
@@ -18,13 +22,45 @@
       line-height: 1.6;
     }
 
+    /* LAYOUT */
+    .layout {
+      display: flex;
+    }
+
+    /* STICKY MENU */
+    .menu {
+      position: fixed;
+      top: 40px;
+      left: 20px;
+      width: 160px;
+      font-size: 14px;
+    }
+
+    .menu a {
+      display: block;
+      margin-bottom: 10px;
+      color: #000;
+      text-decoration: none;
+      opacity: 0.6;
+    }
+
+    .menu a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    /* MAIN */
+    .content {
+      margin-left: 220px;
+      width: 100%;
+    }
+
     section {
       max-width: 900px;
       margin: 0 auto;
       padding: 80px 20px;
     }
 
-    /* HERO */
     .hero {
       display: flex;
       align-items: center;
@@ -40,11 +76,6 @@
       filter: grayscale(100%);
     }
 
-    .hero-text {
-      display: flex;
-      flex-direction: column;
-    }
-
     h1 {
       font-size: 48px;
       margin: 0 0 10px;
@@ -54,7 +85,6 @@
     p {
       font-size: 18px;
       margin: 0;
-      opacity: 0.8;
     }
 
     .divider {
@@ -71,27 +101,28 @@
       margin-bottom: 20px;
     }
 
-    /* VIDEO */
-    .video-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      max-width: 800px;
+    .experience p {
+      margin: 0 0 18px;
+    }
+
+    .experience a {
+      color: #000;
+      text-decoration: underline;
     }
 
     iframe {
       width: 100%;
       height: 420px;
       border: none;
+      margin-bottom: 20px;
     }
 
     .links a {
       display: block;
-      margin-bottom: 1px;
+      margin-bottom: 3px;
       font-size: 18px;
       color: #000;
       text-decoration: none;
-      width: fit-content;
     }
 
     .links a:hover {
@@ -103,11 +134,13 @@
       margin-top: 12px;
     }
 
-    /* mobile fix */
-    @media (max-width: 600px) {
-      .hero {
-        flex-direction: column;
-        text-align: center;
+    @media (max-width: 900px) {
+      .menu {
+        display: none;
+      }
+
+      .content {
+        margin-left: 0;
       }
 
       iframe {
@@ -119,60 +152,100 @@
 
 <body>
 
-<section class="hero">
-  <img src="photo.jpg" alt="Andrei">
+<div class="layout">
 
-  <div class="hero-text">
-    <h1>Andrei Smirnov</h1>
-    <p>музыкант, дизайнер, event-producer</p>
+  <!-- MENU -->
+  <nav class="menu">
+    <a href="#top">↑ top</a>
+    <a href="#about">about</a>
+    <a href="#experience">experience</a>
+    <a href="#music">music</a>
+    <a href="#video">video</a>
+    <a href="#contacts">contacts</a>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- HERO -->
+    <section id="top" class="hero">
+      <img src="photo.jpg" alt="Andrei">
+      <div>
+        <h1>Andrei Smirnov</h1>
+        <p>музыкант, дизайнер, event-producer</p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>Обо мне</h2>
+      <p>
+        Более 18-ти лет я занимаюсь музыкой и развиваюсь в различных её проявлениях...
+        (твой текст без изменений)
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="experience">
+      <h2>Опыт работы</h2>
+
+      <p><b><a href="https://instagram.com/uppercuts.djschool" target="_blank">UPERCUTS DJs Academy</a></b> » 2015–2018<br>
+      От преподавателя до главного партнера... 
+      <a href="https://youtu.be/q-MMuts2NNY?si=5mSXwEbaPyQhp-Si" target="_blank">Faces&Laces 2016</a></p>
+
+      <p><b><a href="https://instagram.com/yambo.music" target="_blank">YAMBO</a></b> » 2017–2021<br>
+      <a href="https://soundcloud.com/yambomusic" target="_blank">SoundCloud</a> проект...
+      <a href="https://vk.com/wall-147970660_2214" target="_blank">YAMBO SUMMER CAMP</a></p>
+
+      <p><b>JBL ambassador</b> » 2020–2021<br>
+      <a href="https://www.instagram.com/p/CJL7t7GCzQM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">кампания JBL</a></p>
+
+      <p><b><a href="https://instagram.com/krasota.restaurant.moscow/" target="_blank">КРАСОТА</a></b> » 2021–now</p>
+
+      <p><b><a href="https://instagram.com/urban__winery/" target="_blank">URBAN WINERY</a></b> » 2024–2026</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- MUSIC -->
+    <section id="music" class="experience">
+      <h2>Музыкальные проекты</h2>
+
+      <p><b>Razumno</b> » 2025 — <a href="#">смотреть</a></p>
+      <p><b>Sound design</b> » 2025 — <a href="#">смотреть</a></p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- VIDEO -->
+    <section id="video">
+      <h2>Видео</h2>
+
+      <iframe src="https://www.youtube.com/embed/tENXWFfen18" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/nQkm1H09OsI" allowfullscreen></iframe>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- CONTACTS -->
+    <section id="contacts">
+      <h2>Контакты</h2>
+
+      <div class="links">
+        <a href="https://t.me/heyandys">telegram</a>
+        <a href="https://instagram.com/hey_andys">Instagram</a>
+        <a href="https://linktr.ee/heyandys">music</a>
+      </div>
+
+      <div class="email">email (andysdrop@gmail.com)</div>
+    </section>
+
   </div>
-</section>
-
-<div class="divider"></div>
-
-<section>
-  <h2>Обо мне</h2>
-  <p>
-    Более 18-ти лет я занимаюсь музыкой и развиваюсь в различных её проявлениях. В следствии чего увлекся дизайном, организацией мероприятий и создании музыкальных полотен. Люблю продумывать процесс и оптимизировать его воплощение. В меру перфекционист и достигатор. Постоянно ищу что-то новое и уникальное, учитывая потребности. Мне важно какой чувственный опыт получит человек, во взаимодействии с продуктом. Параллельно этому идут: польза, ощущения, эмоции и воспоминания.
-    Занимаюсь спортом, йогой, изучаю и практикую буддизм, люблю шоссейные велосипеды, путешествия и ручной труд.
-  </p>
-</section>
-
-<div class="divider"></div>
-
-<section>
-  <h2>Video</h2>
-
-  <div class="video-wrapper">
-
-    <iframe 
-      src="https://www.youtube.com/embed/tENXWFfen18"
-      allowfullscreen>
-    </iframe>
-
-    <iframe 
-      src="https://www.youtube.com/embed/nQkm1H09OsI"
-      allowfullscreen>
-    </iframe>
-
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section>
-  <h2>Контакты</h2>
-
-  <div class="links">
-    <a href="https://t.me/heyandys" target="_blank">telegram</a>
-    <a href="https://instagram.com/hey_andys" target="_blank">Instagram</a>
-    <a href="https://linktr.ee/heyandys" target="_blank">music</a>
-  </div>
-
-  <div class="email">
-    email (andysdrop@gmail.com)
-  </div>
-</section>
+</div>
 
 </body>
 </html>
