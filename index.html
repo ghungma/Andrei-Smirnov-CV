@@ -2,9 +2,122 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrei Smirnov</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 100px 20px;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 52px;
+      margin: 0 0 10px;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.5;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      opacity: 0.85;
+      margin: 0;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      max-width: 420px;
+      margin-top: 30px;
+      filter: grayscale(100%);
+      display: block;
+    }
+
+    .links a {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+      width: fit-content;
+      transition: 0.3s;
+    }
+
+    .links a:hover {
+      border-bottom: 1px solid #fff;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>WORKING</h1>
+
+<section class="hero">
+  <h1>Andrei Smirnov</h1>
+  <p>музыка · движение · звук · практика</p>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <h2>Обо мне</h2>
+  <p>
+    Я создаю практики, соединяющие тело, внимание и звук.
+    Работаю с движением, состоянием и живым присутствием.
+  </p>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <h2>Фото</h2>
+  <img src="photo.jpg" alt="Andrei Smirnov">
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <h2>Контакты</h2>
+
+  <div class="links">
+    <a href="https://t.me/yourusername" target="_blank">Telegram</a>
+    <a href="#" target="_blank">Instagram</a>
+    <a href="mailto:your@email.com">Email</a>
+  </div>
+</section>
+
 </body>
 </html>
