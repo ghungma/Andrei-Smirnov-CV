@@ -21,34 +21,33 @@
     section {
       max-width: 900px;
       margin: 0 auto;
-      padding: 100px 20px;
+      padding: 80px 20px;
     }
 
+    /* HERO */
     .hero {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 40px;
-      padding: 0 20px;
+      flex-wrap: wrap;
     }
 
     .hero img {
       width: 180px;
       height: 180px;
       object-fit: cover;
-      border-radius: 0;
       filter: grayscale(100%);
     }
 
     .hero-text {
       display: flex;
       flex-direction: column;
-      justify-content: center;
     }
 
     h1 {
-      font-size: 52px;
+      font-size: 48px;
       margin: 0 0 10px;
       font-weight: 500;
     }
@@ -90,6 +89,14 @@
       font-size: 18px;
       margin-top: 12px;
     }
+
+    /* mobile fix */
+    @media (max-width: 600px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
@@ -97,7 +104,7 @@
 
 <section class="hero">
   <img src="photo.jpg" alt="Andrei">
-  
+
   <div class="hero-text">
     <h1>Andrei Smirnov</h1>
     <p>музыка · движение · звук · практика</p>
