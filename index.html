@@ -93,7 +93,7 @@ iframe{
   border:0;
 }
 
-/* ✅ HERO ДОБАВЛЕН СЮДА */
+/* HERO */
 .hero{
   max-width:920px;
   margin:0 auto;
@@ -119,6 +119,11 @@ iframe{
   color:var(--muted);
 }
 
+/* уменьшен отступ после "Обо мне" */
+#about p{
+  margin-bottom:15px;
+}
+
 /* mobile */
 @media(max-width:800px){
   .video-grid{grid-template-columns:1fr;}
@@ -137,9 +142,7 @@ iframe{
 
 <nav>
 <a href="#hero">Главная</a>
-<a href="#about p{
-  margin-bottom:15px;
-}">Обо мне</a>
+<a href="#about">Обо мне</a>
 <a href="#exp">Опыт</a>
 <a href="#music">Проекты</a>
 <a href="#video">Видео</a>
@@ -147,7 +150,6 @@ iframe{
 
 <main>
 
-<!-- HERO (ДОБАВЛЕНО В ТВОЙ КОД) -->
 <section class="hero" id="hero">
 <img src="photo.jpg" alt="photo">
 <div>
@@ -156,7 +158,6 @@ iframe{
 </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
 <h2>Обо мне</h2>
 
@@ -166,7 +167,6 @@ iframe{
 
 </section>
 
-<!-- EXPERIENCE -->
 <section id="exp">
 <h2>Опыт Работы</h2>
 
@@ -233,7 +233,6 @@ iframe{
 
 </section>
 
-<!-- MUSIC -->
 <section id="music">
 <h2>Музыкальные проекты и фриланс</h2>
 
@@ -262,7 +261,6 @@ iframe{
 
 </section>
 
-<!-- VIDEO -->
 <section id="video">
 <h2>Видео</h2>
 
